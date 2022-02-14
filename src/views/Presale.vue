@@ -1,9 +1,11 @@
 <template>
   <div>
     <NewHeader />
+
     <!-- <div class="d-flex justify-content-center _header mb-3">
       <img src="/img/logo.png" alt="Logo" />
     </div> -->
+
     <div class="container text-center">
       <!-- <h2 class="fw-bolder fw-2 _presale my-4">
         THE OFFICIAL SALE OF THE
