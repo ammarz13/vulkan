@@ -1,0 +1,85 @@
+.light-theme {
+  body {
+    color: #23262f;
+    background: #fff;
+
+    .footer-wrap a {
+      color: #777e90;
+    }
+
+    .switch-label {
+      background: rgba(230, 232, 236, 0.7);
+    }
+    .switch-toggle {
+      position: absolute;
+
+      left: 2px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 4px solid #f4f5f6;
+      box-shadow: 0px 2px 8px;
+    }
+    .switch-toggle-checked {
+      transform: translate(40px, -50%) !important;
+    }
+
+    .active {
+      .nav-link {
+        color: #23262f !important;
+      }
+    }
+    .nav-link {
+      color: #777e90 !important;
+    }
+
+    .btn-small {
+      color: #23262f;
+      border-color: #e6e8ec;
+      &:hover {
+        border-color: #777e90;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: #ffffff;
+      box-shadow: 0px 16px 64px 0;
+
+      .dropdown-item {
+        color: #777e90;
+        &:hover {
+          background-color: #f4f5f6;
+        }
+      }
+      &:before {
+        background-image: url("../../public/img/white-top.svg");
+      }
+    }
+
+    ._presale {
+      color: #000000;
+      text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
+        2px 2px 0 #fff;
+    }
+    .salebox {
+      box-shadow: 0px 16px 64px;
+      background: #fcfcfd;
+    }
+
+    .new-input {
+      box-shadow: inset 0 0 0 2px #e6e8ec;
+
+      &:hover {
+        box-shadow: inset 0 0 0 2px #777e90;
+      }
+    }
+    .navbar-toggler {
+      svg {
+        path {
+          fill: #000000;
+        }
+      }
+    }
+  }
+}

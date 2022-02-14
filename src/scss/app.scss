@@ -1,0 +1,114 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "../scss/dark.scss";
+@import "../scss/light.scss";
+
+@import "./variables";
+
+$body-bg: $_bg_color;
+$body-color: $_white;
+
+$primary: $_primary;
+
+$link-color: $_primary;
+$link-decoration: none;
+
+$input-bg: $_white;
+$input-color: $_bg_color;
+
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+//@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/helpers";
+@import "node_modules/bootstrap/scss/buttons";
+//@import "node_modules/bootstrap/scss/accordion";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/forms";
+
+@import "node_modules/bootstrap/scss/utilities/api";
+
+a {
+  transition: 0.15s ease-in-out;
+
+  &[disabled] {
+    color: desaturate(darken($_primary, 20%), 50%) !important;
+    pointer-events: none !important;
+  }
+}
+
+// FADE TRANSITION
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+.dropdown-toggle {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  background-image: url("../../public/img/question.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin-left: 16px;
+  &:after {
+    display: none;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
+.dropdown-menu {
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 16px;
+  padding: 32px 16px;
+  min-width: 198px;
+  border-radius: 12px;
+  top: calc(100% + 20px);
+  width: 198px;
+  @media screen and (min-width: 768px) and (max-width: 1320px) {
+    left: -100%;
+  }
+  .dropdown-item {
+    padding: 8px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      border-radius: 8px;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 32px;
+    height: 13px;
+    margin-left: -7px;
+    transform: translateX(-50%);
+    @media screen and (min-width: 768px) and (max-width: 1320px) {
+      left: unset;
+      right: calc(0px + 12px);
+    }
+  }
+}
+
+.salebox {
+  padding: 28px;
+  border-radius: 24px;
+}

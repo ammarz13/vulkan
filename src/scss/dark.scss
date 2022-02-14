@@ -1,0 +1,84 @@
+.dark-theme {
+  body {
+    background: #141416 !important;
+    color: #fcfcfd !important;
+
+    footer,
+    header {
+      border-color: #353945;
+    }
+    ._line {
+      background-color: #353945;
+    }
+    .footer-wrap a {
+      color: #ffffff;
+    }
+    .switch-label {
+      background: rgb(35, 38, 47);
+    }
+    .switch-toggle {
+      width: 4px;
+      height: 16px;
+      border-width: 2px;
+      border-radius: 2px;
+      transform: translate(48px, -50%);
+      border-color: rgb(55, 114, 255);
+      box-shadow: none;
+    }
+    .switch-toggle-checked {
+      transform: translate(48px, -50%) !important;
+    }
+
+    .active {
+      .nav-link {
+        color: #f4f5f6 !important;
+      }
+    }
+    .nav-link {
+      color: #b1b5c3 !important;
+    }
+
+    .btn-small {
+      color: #f4f5f6;
+      &:hover {
+        border-color: #e6e8ec;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: #23262f;
+      .dropdown-item {
+        color: #b1b5c3;
+        &:hover {
+          background-color: #141416;
+        }
+      }
+      &:before {
+        background-image: url("../../public/img/dark-top.svg");
+      }
+    }
+    .dropdown-divider {
+      background-color: #353945;
+    }
+    .salebox {
+      background-color: #23262f;
+      border: 1px solid #353945;
+    }
+    .new-input {
+      color: white;
+
+      box-shadow: inset 0 0 0 2px #353945;
+      &:hover {
+        box-shadow: inset 0 0 0 2px #e6e8ec;
+      }
+    }
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.1);
+      svg {
+        path {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}
