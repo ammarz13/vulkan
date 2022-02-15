@@ -46,9 +46,9 @@
         </div>
       </div>
 
-      <div class="row">
-        <!-- <div class="col-lg-6 order-2 order-lg-1 mb-3">
-          <div class="custom-col d-flex flex-column h-100">
+      <div class="row position-relative">
+        <div class="col-lg-6 mb-3 infocolumn">
+          <div class="d-flex flex-column salebox h-100">
             <div>
               <h3 class="fw-bold fs-1 mb-3">INFO</h3>
               <div class="_line"></div>
@@ -64,7 +64,7 @@
               class="d-flex flex-column justify-content-between h-100 mb-2"
             >
               <div class="d-flex flex-column justify-content-center h-100 mb-3">
-                <div class="fs-5 fw-bold text-primary">Sale Date</div>
+                <div class="fs-5 fw-bold">Sale Date</div>
                 <div class="mb-3">
                   {{
                     $date(startTime)
@@ -74,20 +74,11 @@
                   EST
                 </div>
 
-                <div class="fs-5 fw-bold text-primary">
-                  Individual Addresses
-                </div>
+                <div class="fs-5 fw-bold">Individual Addresses</div>
                 <div class="mb-2">1000</div>
 
-                <div class="fs-5 fw-bold text-primary">Max per Wallet</div>
+                <div class="fs-5 fw-bold">Max per Wallet</div>
                 <div>{{ maxPerWallet }} {{ tokenName }}</div>
-              </div>
-
-              <div class="text-muted small">
-                Each Tier 3 VRLAND ticket can be used to claim Tier 3 land which
-                represents a 4x4x5 plot you can access on the game. Your plot
-                can enable you to showcase your hero, build a house, start a
-                farm, or even create your own PVP arena!
               </div>
             </div>
             <div v-if="false">
@@ -96,10 +87,13 @@
               >
             </div>
           </div>
-        </div> -->
-        <div class="col-lg-6 order-1 order-lg-2 mb-3 mx-auto">
-          <div class="h-100">
-            <div class="salebox">
+        </div>
+        <span class="arrow-box">
+          <font-awesome-icon icon="fas fa-long-arrow-alt-right" />
+        </span>
+        <div class="col-lg-6 mb-3 presalebox">
+          <div class="salebox h-100">
+            <div class="">
               <div>
                 <h3 class="fw-bold fs-1 mb-3">PRESALE LIVE NOW</h3>
                 <div class="_line"></div>
@@ -159,23 +153,24 @@
                 </div>
               </div>
             </div>
-            <div>
-              <div v-if="!userAccount">
-                <button class="btn-lg connect-wallet" @click="gConnect()">
-                  Connect wallet
-                </button>
-              </div>
-              <div v-if="userAccount">
-                <button
-                  class="btn btn-primary btn-lg mt-3 px-5"
-                  @click="buy()"
-                  :disabled="!buyAmountValid"
-                >
-                  BUY
-                </button>
-              </div>
-            </div>
           </div>
+        </div>
+      </div>
+
+      <div>
+        <div v-if="!userAccount">
+          <button class="btn-lg connect-wallet" @click="gConnect()">
+            Connect wallet
+          </button>
+        </div>
+        <div v-if="userAccount">
+          <button
+            class="btn btn-primary btn-lg mt-3 px-5"
+            @click="buy()"
+            :disabled="!buyAmountValid"
+          >
+            BUY
+          </button>
         </div>
       </div>
 
@@ -332,6 +327,50 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 90px;
   border: none;
   margin-bottom: 20px;
+}
+.infocolumn {
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width: 991px) {
+    justify-content: center;
+  }
+}
+.presalebox {
+  @media screen and (max-width: 991px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.arrow-box {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10.2px;
+  height: 51px;
+  width: 51px;
+  background: #fff;
+  margin: -0.8em;
+  border: 2px solid #e6e8ec;
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: -8px 0 0;
+  svg {
+    width: 16px;
+    height: 16px;
+    color: #000;
+  }
+  @media screen and (max-width: 991px) {
+    margin: 16px 0 0;
+  }
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
 }
 </style>
 

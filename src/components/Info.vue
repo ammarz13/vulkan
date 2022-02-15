@@ -5,16 +5,10 @@
         <div class="info-text">
           <h4 class="text-center">Info</h4>
           <p class="text-center">
-            VULKAN Safe is a smart contract wallet running on Ethereum that
-            requires a minimum number of people to approve a transaction before
-            it can occur (M-of-N). If for example you have 3 main stakeholders
-            in your business, you are able to set up the wallet to require
-            approval from all 3 people before the transaction is sent. This
-            assures that no single person could compromise the funds.On top of
-            that, VULKAN Safe gives you complete self custody over your funds.
-            There is no risk of a bank giving you a hassle for running a crypto
-            business and the smart contract that is deployed is completely
-            trustless and in your control.
+            Each Tier 3 VRLAND ticket can be used to claim Tier 3 land which
+            represents a 4x4x5 plot you can access on the game. Your plot can
+            enable you to showcase your hero, build a house, start a farm, or
+            even create your own PVP arena!
           </p>
         </div>
       </div>

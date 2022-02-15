@@ -4,7 +4,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faQuestionCircle,faBars,faLightbulb } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faQuestionCircle,faBars,faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faDiscord} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { BootstrapVue } from 'bootstrap-vue'
@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import './scss/app.scss'
-library.add(faUserSecret, faTwitter, faDiscord, faQuestionCircle,faBars,faLightbulb )
+library.add(faUserSecret, faTwitter, faDiscord, faQuestionCircle,faBars,faLongArrowAltRight )
 import globalMixins from "@/mixins/globalMixins";
 Vue.mixin(globalMixins)
 

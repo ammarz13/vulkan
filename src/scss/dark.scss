@@ -80,5 +80,14 @@
         }
       }
     }
+
+    .arrow-box {
+      border: 2px solid #353945;
+      background: #141416;
+      box-shadow: inset 0 0 0 1px #353945;
+      svg {
+        color: #ffffff;
+      }
+    }
   }
 }
