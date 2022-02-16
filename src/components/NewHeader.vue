@@ -17,7 +17,11 @@
                 <b-nav-item href="#">Home</b-nav-item>
                 <b-nav-item href="#" class="active">Buy</b-nav-item>
                 <b-nav-item href="#">Info</b-nav-item>
-                <b-nav-item href="#">Docs</b-nav-item>
+                <b-nav-item
+                  href="https://www.metarun.game/tokenomics"
+                  target="_blank"
+                  >Docs</b-nav-item
+                >
               </b-navbar-nav>
 
               <!-- Right aligned nav items -->

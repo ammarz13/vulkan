@@ -53,6 +53,18 @@ a {
 .fade-leave-active {
   opacity: 0;
 }
+#app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.main-page {
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 .dropdown-toggle {
   width: 25px;
   height: 25px;

@@ -1,37 +1,37 @@
 <template>
-  <div>
+  <div class="main-page">
     <NewHeader />
 
     <!-- <div class="d-flex justify-content-center _header mb-3">
       <img src="/img/logo.png" alt="Logo" />
     </div> -->
-
-    <div class="container text-center">
-      <!-- <h2 class="fw-bolder fw-2 _presale my-4">
+    <div class="main">
+      <div class="container text-center">
+        <!-- <h2 class="fw-bolder fw-2 _presale my-4">
         THE OFFICIAL SALE OF THE
         <span class="text-primary">{{ tokenName }}</span>
       </h2> -->
-      <h2 class="fw-bolder fw-2 _presale">Buy {{ tokenName }}</h2>
-      <span class="text-uppercase fw-bolder small-text"
-        >PRESALE STARTING
-        {{ $date(startTime).tz("America/New_York").format("MMMM D, h:mm A") }}
-        EST</span
-      >
-      <div class="row justify-content-center mb-60">
-        <div class="col-md-12 col-lg-10">
-          <div class="dark-bg pb-0 fw-bolder">
-            <div
-              v-if="!firstTimeLoaded"
-              class="fs-3 align-self-center text-primary mb-4"
-            >
-              Loading...
-            </div>
-            <div v-else>
-              <div class="mb-0 small-text">
-                TOTAL SOLD: {{ totalTokensPurchased.toFixed() }} /
-                {{ totalTokensForSale }} {{ tokenName }}
+        <h2 class="fw-bolder fw-2 _presale">Buy {{ tokenName }}</h2>
+        <span class="text-uppercase fw-bolder small-text"
+          >PRESALE STARTING
+          {{ $date(startTime).tz("America/New_York").format("MMMM D, h:mm A") }}
+          EST</span
+        >
+        <div class="row justify-content-center mb-60">
+          <div class="col-md-12 col-lg-10">
+            <div class="dark-bg pb-0 fw-bolder">
+              <div
+                v-if="!firstTimeLoaded"
+                class="fs-3 align-self-center text-primary mb-4"
+              >
+                Loading...
               </div>
-              <!-- <div class="progress mb-4">
+              <div v-else>
+                <div class="mb-0 small-text">
+                  TOTAL SOLD: {{ totalTokensPurchased.toFixed() }} /
+                  {{ totalTokensForSale }} {{ tokenName }}
+                </div>
+                <!-- <div class="progress mb-4">
                 <div
                   class="progress-bar"
                   role="progressbar"
@@ -41,154 +41,167 @@
                   aria-valuemax="100"
                 ></div>
               </div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row position-relative">
-        <div class="col-lg-6 mb-3 infocolumn">
-          <div class="d-flex flex-column salebox h-100">
-            <div>
-              <h3 class="fw-bold fs-1 mb-3">INFO</h3>
-              <div class="_line"></div>
-            </div>
-            <div
-              v-if="!firstTimeLoaded"
-              class="fs-3 align-self-center text-primary"
-            >
-              Loading...
-            </div>
-            <div
-              v-else
-              class="d-flex flex-column justify-content-between h-100 mb-2"
-            >
-              <div class="d-flex flex-column justify-content-center h-100 mb-3">
-                <div class="fs-5 fw-bold">Sale Date</div>
-                <div class="mb-3">
-                  {{
-                    $date(startTime)
-                      .tz("America/New_York")
-                      .format("MMMM D, h:mm A")
-                  }}
-                  EST
-                </div>
-
-                <div class="fs-5 fw-bold">Individual Addresses</div>
-                <div class="mb-2">1000</div>
-
-                <div class="fs-5 fw-bold">Max per Wallet</div>
-                <div>{{ maxPerWallet }} {{ tokenName }}</div>
               </div>
             </div>
-            <div v-if="false">
-              <a href class="text-info pb-0" @click.prevent="addTokenToWallet()"
-                >Add {{ tokenName }} asset to wallet</a
-              >
-            </div>
           </div>
         </div>
-        <span class="arrow-box">
-          <font-awesome-icon icon="fas fa-long-arrow-alt-right" />
-        </span>
-        <div class="col-lg-6 mb-3 presalebox">
-          <div class="salebox h-100">
-            <div class="">
+
+        <div class="row position-relative">
+          <div class="col-lg-6 mb-3 infocolumn">
+            <div class="d-flex flex-column salebox h-100">
               <div>
-                <h3 class="fw-bold fs-1 mb-3">PRESALE LIVE NOW</h3>
+                <h3 class="fw-bold fs-1 mb-3">INFO</h3>
                 <div class="_line"></div>
               </div>
-
               <div
                 v-if="!firstTimeLoaded"
                 class="fs-3 align-self-center text-primary"
               >
                 Loading...
               </div>
-
-              <div v-else class="d-flex flex-column justify-content-between">
-                <div class="mb-3">
-                  <h5 class="mb-4 fw-bold">
-                    {{ 1 / displayPriceDivider }} ETH =
-                    {{ tokensPerEth / displayPriceDivider }} {{ tokenName }}
-                  </h5>
-
-                  <div class="small fs-6 mb-3" v-if="userAccount">
-                    Your balance:
-                    {{ accountETHBalance | formatBalance(tokenDecimals, 2) }}
-                    {{ ethName }}
+              <div
+                v-else
+                class="d-flex flex-column justify-content-between h-100 mb-2"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center h-100 mb-3"
+                >
+                  <div class="fs-5 fw-bold">Sale Date</div>
+                  <div class="mb-3">
+                    {{
+                      $date(startTime)
+                        .tz("America/New_York")
+                        .format("MMMM D, h:mm A")
+                    }}
+                    EST
                   </div>
 
-                  <div class="input-group mb-3 _input_group mx-auto">
-                    <!-- <button
+                  <div class="fs-5 fw-bold">Individual Addresses</div>
+                  <div class="mb-2">1000</div>
+
+                  <div class="fs-5 fw-bold">Max per Wallet</div>
+                  <div>{{ maxPerWallet }} {{ tokenName }}</div>
+                </div>
+              </div>
+              <div v-if="false">
+                <a
+                  href
+                  class="text-info pb-0"
+                  @click.prevent="addTokenToWallet()"
+                  >Add {{ tokenName }} asset to wallet</a
+                >
+              </div>
+            </div>
+          </div>
+          <span class="arrow-box">
+            <font-awesome-icon icon="fas fa-long-arrow-alt-right" />
+          </span>
+          <div class="col-lg-6 mb-3 presalebox">
+            <div class="salebox h-100">
+              <div class="">
+                <div>
+                  <h3 class="fw-bold fs-1 mb-3">PRESALE LIVE NOW</h3>
+                  <div class="_line"></div>
+                </div>
+
+                <div
+                  v-if="!firstTimeLoaded"
+                  class="fs-3 align-self-center text-primary"
+                >
+                  Loading...
+                </div>
+
+                <div v-else class="d-flex flex-column justify-content-between">
+                  <div class="mb-3">
+                    <h5 class="mb-4 fw-bold">
+                      {{ 1 / displayPriceDivider }} ETH =
+                      {{ tokensPerEth / displayPriceDivider }} {{ tokenName }}
+                    </h5>
+
+                    <div class="small fs-6 mb-3" v-if="userAccount">
+                      Your balance:
+                      {{ accountETHBalance | formatBalance(tokenDecimals, 2) }}
+                      {{ ethName }}
+                    </div>
+
+                    <div class="input-group mb-3 _input_group mx-auto">
+                      <!-- <button
                     class="btn btn-outline-primary"
                     type="button"
                     @click="min()"
                   >
                     MIN
                   </button> -->
-                    <input
-                      class="form-control new-input"
-                      type="number"
-                      :min="minBuy"
-                      :max="maxEth"
-                      step="0.1"
-                      :placeholder="`${ethName} amount `"
-                      v-model="buyAmount"
-                      :class="{ invalid: buyAmount && !buyAmountValid }"
-                    />
-                    <!-- <button
+                      <input
+                        class="form-control new-input"
+                        type="number"
+                        :min="minBuy"
+                        :max="maxEth"
+                        step="0.1"
+                        :placeholder="`${ethName} amount `"
+                        v-model="buyAmount"
+                        :class="{ invalid: buyAmount && !buyAmountValid }"
+                      />
+                      <!-- <button
                     class="btn btn-outline-primary"
                     type="button"
                     @click="max()"
                   >
                     MAX
                   </button> -->
-                  </div>
+                    </div>
 
-                  <h5 class="mb-1 mt-2" v-if="buyAmount">
-                    You will get {{ buyCalculated }} {{ tokenName }}
-                  </h5>
-                  <!--h5 class="mb-1 mt-2 text-danger" v-if="!buyAmount">Enter correct {{ethName}} amount</h5-->
+                    <h5 class="mb-1 mt-2" v-if="buyAmount">
+                      You will get {{ buyCalculated }} {{ tokenName }}
+                    </h5>
+                    <!--h5 class="mb-1 mt-2 text-danger" v-if="!buyAmount">Enter correct {{ethName}} amount</h5-->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div>
-        <div v-if="!userAccount">
-          <button class="btn-lg connect-wallet" @click="gConnect()">
-            Connect Wallet
-          </button>
+        <div>
+          <div v-if="!userAccount">
+            <button class="btn-lg connect-wallet" @click="gConnect()">
+              Connect Wallet
+            </button>
+          </div>
+          <div v-if="userAccount">
+            <button
+              class="btn btn-primary btn-lg mt-3 px-5"
+              @click="buy()"
+              :disabled="!buyAmountValid"
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
-        <div v-if="userAccount">
-          <button
-            class="btn btn-primary btn-lg mt-3 px-5"
-            @click="buy()"
-            :disabled="!buyAmountValid"
-          >
-            Buy Now
-          </button>
-        </div>
-      </div>
 
-      <button
-        class="btn btn-link text-muted mt-3 px-5"
-        @click="reset()"
-        v-if="false"
-      >
-        RESET
-      </button>
+        <button
+          class="btn btn-link text-muted mt-3 px-5"
+          @click="reset()"
+          v-if="false"
+        >
+          RESET
+        </button>
+      </div>
+      <Info />
     </div>
-    <Info />
+
     <NewFooter />
   </div>
 </template>
 
 <style lang="scss">
 @import "@/scss/variables.scss";
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
 ._lock {
   display: flex;
   justify-content: center;
