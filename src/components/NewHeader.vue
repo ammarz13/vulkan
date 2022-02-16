@@ -33,8 +33,16 @@
                   <b-dropdown-item href="#"> Request feature</b-dropdown-item>
                   <b-dropdown-item href="#">F.A.Q</b-dropdown-item>
                   <hr class="dropdown-divider" />
-                  <b-dropdown-item href="#">Discard</b-dropdown-item>
-                  <b-dropdown-item href="#">Twitter</b-dropdown-item>
+                  <b-dropdown-item
+                    href="https://discord.com/invite/metarungame"
+                    target="_blank"
+                    >Discord</b-dropdown-item
+                  >
+                  <b-dropdown-item
+                    href="https://twitter.com/MetarunGame"
+                    target="_blank"
+                    >Twitter</b-dropdown-item
+                  >
                 </b-nav-item-dropdown>
               </div>
             </b-collapse>

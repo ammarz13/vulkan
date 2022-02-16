@@ -5,11 +5,11 @@
         <div
           class="col-md-6 col-sm-8 d-inline-flex align-items-center justify-content-sm-start mb-res justify-content-center"
         >
-          <p class="mb-0">@ 2022 VULKAN TOKENS</p>
-          <a href="#" target="_blank">
+          <p class="mb-0">@ 2022 Vulkan All rights reserved</p>
+          <a href="https://twitter.com/MetarunGame" target="_blank">
             <font-awesome-icon icon="fab fa-twitter" />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://discord.com/invite/metarungame" target="_blank">
             <font-awesome-icon icon="fab fa-discord" />
           </a>
         </div>

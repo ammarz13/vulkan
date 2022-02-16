@@ -28,8 +28,8 @@
               </div>
               <div v-else>
                 <div class="mb-0 small-text">
-                  TOTAL SOLD: {{ totalTokensPurchased.toFixed() }} /
-                  {{ totalTokensForSale }} {{ tokenName }}
+                  {{ totalTokensPurchased.toFixed() }} /
+                  {{ totalTokensForSale }} Participants
                 </div>
                 <!-- <div class="progress mb-4">
                 <div
