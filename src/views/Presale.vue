@@ -160,7 +160,7 @@
       <div>
         <div v-if="!userAccount">
           <button class="btn-lg connect-wallet" @click="gConnect()">
-            Connect wallet
+            Connect Wallet
           </button>
         </div>
         <div v-if="userAccount">
@@ -169,7 +169,7 @@
             @click="buy()"
             :disabled="!buyAmountValid"
           >
-            BUY
+            Buy Now
           </button>
         </div>
       </div>
