@@ -5,7 +5,7 @@
         <div
           class="col-md-6 col-sm-8 d-inline-flex align-items-center justify-content-sm-start mb-res justify-content-center"
         >
-          <p class="mb-0">@ 2022 Vulkan All rights reserved</p>
+          <p class="mb-0">@ 2022 vulkcan All rights reserved</p>
           <a href="https://twitter.com/MetarunGame" target="_blank">
             <font-awesome-icon icon="fab fa-twitter" />
           </a>

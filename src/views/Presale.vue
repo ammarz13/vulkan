@@ -20,10 +20,7 @@
         <div class="row justify-content-center mb-60">
           <div class="col-md-12 col-lg-10">
             <div class="dark-bg pb-0 fw-bolder">
-              <div
-                v-if="!firstTimeLoaded"
-                class="fs-3 align-self-center text-primary mb-4"
-              >
+              <div v-if="!firstTimeLoaded" class="fs-3 align-self-center mb-4">
                 Loading...
               </div>
               <div v-else>
@@ -53,10 +50,7 @@
                 <h3 class="fw-bold fs-1 mb-3">INFO</h3>
                 <div class="_line"></div>
               </div>
-              <div
-                v-if="!firstTimeLoaded"
-                class="fs-3 align-self-center text-primary"
-              >
+              <div v-if="!firstTimeLoaded" class="fs-3 align-self-center">
                 Loading...
               </div>
               <div
@@ -104,10 +98,7 @@
                   <div class="_line"></div>
                 </div>
 
-                <div
-                  v-if="!firstTimeLoaded"
-                  class="fs-3 align-self-center text-primary"
-                >
+                <div v-if="!firstTimeLoaded" class="fs-3 align-self-center">
                   Loading...
                 </div>
 
@@ -408,7 +399,7 @@ export default {
       tokenContract: null,
       tokenDecimals: 18,
       // TOEDIT
-      tokenName: "VULKAN TOKENS",
+      tokenName: "VULKCAN TOKENS",
       ethName: "ETH",
       rounds: [
         { name: "1", tokens: 1000, price: 0.1 },
