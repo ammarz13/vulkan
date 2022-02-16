@@ -26,7 +26,7 @@
               <div v-else>
                 <div class="mb-0 small-text">
                   {{ totalTokensPurchased.toFixed() }} /
-                  {{ totalTokensForSale }} Participants
+                  {{ totalTokensForSale }} PARTICIPANTS
                 </div>
                 <!-- <div class="progress mb-4">
                 <div
@@ -546,7 +546,7 @@ export default {
     },
 
     tokensPerEth() {
-      return (1 / this.rounds[this.currentRound.index].price).toFixed();
+      return (1000 / this.rounds[this.currentRound.index].price).toFixed();
     },
 
     buyAmountValid() {
